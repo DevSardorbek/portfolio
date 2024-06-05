@@ -1,0 +1,93 @@
+.qualifiaction__container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.qualifiaction__tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  gap: 80px;
+}
+
+.qualifiaction__button {
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(33, 27, 27);
+  margin: 0 4px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.qualifiaction__button:hover {
+  color: rgb(76, 51, 51);
+}
+
+.qualifiaction__icon {
+  font-size: 1.8rem;
+  margin-right: 2px;
+}
+
+.qualifiaction__active {
+  color: rgb(36, 8, 8);
+}
+
+.qualifiaction__sections {
+  display: grid;
+  grid-template-columns: 1fr;
+  //   justify-content: center;
+}
+
+.qualifiaction__content {
+  display: none;
+}
+
+.qualifiaction__content-active {
+  display: block;
+}
+
+.qualifiaction__data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+  align-items: center; /* Center align items vertically */
+  position: relative; /* Required for absolute positioning of the line */
+}
+
+.qualifiaction__title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.qualifiaction__subtitle {
+  display: inline-block;
+  font-size: small;
+  margin-bottom: 2px;
+}
+
+.qualifiaction__calendar {
+  font-size: small;
+}
+
+/* Circle */
+.qualifiaction__router {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: rgb(121, 113, 113);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1; /* Ensure the circle is above the line */
+}
+
+/* Line */
+.qualifiaction__line {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: rgb(121, 113, 113);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0; /* Ensure the line is below the circle */
+}

@@ -1,0 +1,98 @@
+.about {
+  .about__titlee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 24px;
+    gap: 4px;
+    h2 {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+    span {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+  }
+}
+.about__container {
+  grid-template-columns: repeat(2, 1fr);
+  .about__img {
+    width: 350px;
+    height: 350px;
+    border-radius: 1.5rem;
+    object-fit: fill;
+
+    justify-self: center;
+  }
+  .about__info {
+    grid-template-columns: repeat(3, 180px);
+    gap: 0.5rem;
+    margin-bottom: 8px;
+    .about__box {
+      background-color: rgb(243, 241, 239);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 0.75rem;
+      text-align: center;
+      padding: 1rem 1.25rem;
+      color: rgb(27, 22, 22);
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      .about__icon {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+      .about__title {
+        font-size: 300;
+        font-weight: 500;
+      }
+      .about__subtitle {
+        font-size: normal;
+        margin-top: 7px;
+      }
+    }
+  }
+  .about__desctiption {
+    margin-top: 18px;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    color: rgb(31, 25, 25);
+    font-weight: 500;
+  }
+}
+@media (max-width: 992px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+  .about__img {
+    width: 220px;
+  }
+  .about__box {
+    padding: 0.75rem, 0.5rem;
+  }
+  .about__data {
+    text-align: center;
+  }
+  .about__info {
+    justify-content: center;
+  }
+  .about__desctiption {
+    padding: 0 5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .about__info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about__desctiption {
+    padding: 0;
+  }
+}
+@media (max-width: 350px) {
+  .about__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
